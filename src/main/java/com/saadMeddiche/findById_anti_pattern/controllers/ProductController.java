@@ -1,7 +1,7 @@
 package com.saadMeddiche.findById_anti_pattern.controllers;
 
 import com.saadMeddiche.findById_anti_pattern.requests.ProductCreateRequest;
-import com.saadMeddiche.findById_anti_pattern.services.ProductCreateService;
+import com.saadMeddiche.findById_anti_pattern.services.ProductClassicCreateService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class ProductController {
 
-    private final ProductCreateService productCreateService;
+    private final ProductClassicCreateService productClassicCreateService;
 
-    @PostMapping
-    public void createProduct(@RequestBody ProductCreateRequest createRequest){
-         this.productCreateService.createProduct(createRequest);
+    @PostMapping("/classic")
+    public void createProductClassic(@RequestBody ProductCreateRequest createRequest) {
+         this.productClassicCreateService.createProduct(createRequest);
     }
 
 }

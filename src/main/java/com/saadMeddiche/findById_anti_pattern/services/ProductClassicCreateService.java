@@ -18,7 +18,7 @@ import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
-public class ProductCreateService {
+public class ProductClassicCreateService {
 
     private final ProductRepository productRepository;
 
