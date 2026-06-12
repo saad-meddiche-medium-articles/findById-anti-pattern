@@ -1,3 +1,19 @@
-spring:
-  application:
-    name: findById-anti-pattern
+spring.application.name: findById-anti-pattern
+
+spring.datasource:
+  url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/findById-anti-pattern?reWriteBatchedInserts=true}
+  username: ${DATASOURCE_USERNAME:user}
+  password: ${DATASOURCE_PASSWORD:1234}
+
+spring.jpa:
+  hibernate:.ddl-auto: ${JPA_HIBERNATE_DDL_AUTO:update}
+  show-sql: ${JPA_SHOW_SQL:true}
+
+logging.level.org:
+  hibernate:
+    SQL: DEBUG
+    type.descriptor.sql.BasicBinder: TRACE
+    orm.jdbc.bind: TRACE
+  springframework:
+    data.*.*: trace
+    cache.*: trace
