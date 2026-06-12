@@ -1,6 +1,5 @@
 package com.saadMeddiche.findById_anti_pattern.services;
 
-
 import com.saadMeddiche.findById_anti_pattern.entitites.Product;
 import com.saadMeddiche.findById_anti_pattern.repositories.ProductRepository;
 import com.saadMeddiche.findById_anti_pattern.requests.ProductCreateRequest;
@@ -31,12 +30,14 @@ public class ProductCreateService {
 
     }
 
-
     private void validateCreateRequest(ProductCreateRequest createRequest) {
+
         Set<ConstraintViolation<ProductCreateRequest>> violations = this.validator.validate(createRequest);
-        if(!violations.isEmpty()) {
+
+        if (!violations.isEmpty()) {
             throw new ConstraintViolationException(violations);
         }
+
     }
 
     private Product mapToProduct(ProductCreateRequest createRequest) {

@@ -3,7 +3,6 @@ package com.saadMeddiche.findById_anti_pattern.services;
 import com.saadMeddiche.findById_anti_pattern.entitites.Person;
 import com.saadMeddiche.findById_anti_pattern.repositories.PersonRepository;
 import com.saadMeddiche.findById_anti_pattern.requests.PersonCreateRequest;
-import com.saadMeddiche.findById_anti_pattern.requests.ProductCreateRequest;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Validator;
@@ -31,10 +30,13 @@ public class PersonCreateService {
     }
 
     private void validateCreateRequest(PersonCreateRequest createRequest) {
+
         Set<ConstraintViolation<PersonCreateRequest>> violations = this.validator.validate(createRequest);
-        if(!violations.isEmpty()) {
+
+        if (!violations.isEmpty()) {
             throw new ConstraintViolationException(violations);
         }
+
     }
 
     private Person mapToPerson(PersonCreateRequest createRequest) {
