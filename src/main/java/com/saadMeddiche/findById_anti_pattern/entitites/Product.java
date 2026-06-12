@@ -28,4 +28,7 @@ public class Product {
     @Column(nullable = false, unique = true)
     private UUID serial;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Person person;
+
 }
