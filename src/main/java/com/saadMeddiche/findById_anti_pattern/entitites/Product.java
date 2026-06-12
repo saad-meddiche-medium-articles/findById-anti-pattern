@@ -29,6 +29,6 @@ public class Product {
     private UUID serial;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Person person;
+    private Person owner;
 
 }

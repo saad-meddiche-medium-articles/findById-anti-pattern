@@ -25,7 +25,7 @@ public class Person {
 
     private @Nullable LocalDate birthDate;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "person")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "owner")
     private List<Product> products;
 
 }
