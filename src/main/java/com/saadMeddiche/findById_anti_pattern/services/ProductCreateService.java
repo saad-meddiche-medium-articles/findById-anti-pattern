@@ -2,6 +2,7 @@ package com.saadMeddiche.findById_anti_pattern.services;
 
 import com.saadMeddiche.findById_anti_pattern.entitites.Person;
 import com.saadMeddiche.findById_anti_pattern.entitites.Product;
+import com.saadMeddiche.findById_anti_pattern.exceptions.customs.ValidationException;
 import com.saadMeddiche.findById_anti_pattern.repositories.PersonRepository;
 import com.saadMeddiche.findById_anti_pattern.repositories.ProductRepository;
 import com.saadMeddiche.findById_anti_pattern.requests.ProductCreateRequest;
@@ -11,9 +12,7 @@ import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Set;
