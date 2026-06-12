@@ -7,16 +7,22 @@ spring.datasource:
 
 spring.jpa:
   hibernate:.ddl-auto: ${JPA_HIBERNATE_DDL_AUTO:update}
-  show-sql: ${JPA_SHOW_SQL:true}
+  show-sql: ${JPA_SHOW_SQL:false}
 
 spring.web.error:
   include-message: always
 
-logging.level.org:
-  hibernate:
-    SQL: DEBUG
-    type.descriptor.sql.BasicBinder: TRACE
-    orm.jdbc.bind: TRACE
-  springframework:
-    data.*.*: trace
-    cache.*: trace
+logging.level.net.ttddyy:
+  dsproxy.listener: debug
+
+#logging.level.org.hibernate.SQL: debug
+#logging.level.org.hibernate.orm.jdbc.bind: trace
+
+#logging.level.org:
+#  hibernate:
+#    SQL: DEBUG
+#    type.descriptor.sql.BasicBinder: TRACE
+#    orm.jdbc.bind: TRACE
+#  springframework:
+#    data.*.*: trace
+#    cache.*: trace
