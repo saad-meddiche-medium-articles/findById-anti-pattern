@@ -1,4 +1,4 @@
-package com.saadMeddiche.findById_anti_pattern.entitites;
+package com.saadMeddiche.findById_anti_pattern.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.saadMeddiche.findById_anti_pattern.entitites;
+package com.saadMeddiche.findById_anti_pattern.entities;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;

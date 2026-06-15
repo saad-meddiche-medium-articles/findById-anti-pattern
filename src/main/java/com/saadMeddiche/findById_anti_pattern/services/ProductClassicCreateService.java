@@ -1,7 +1,7 @@
 package com.saadMeddiche.findById_anti_pattern.services;
 
-import com.saadMeddiche.findById_anti_pattern.entitites.Person;
-import com.saadMeddiche.findById_anti_pattern.entitites.Product;
+import com.saadMeddiche.findById_anti_pattern.entities.Person;
+import com.saadMeddiche.findById_anti_pattern.entities.Product;
 import com.saadMeddiche.findById_anti_pattern.exceptions.customs.ValidationException;
 import com.saadMeddiche.findById_anti_pattern.repositories.PersonRepository;
 import com.saadMeddiche.findById_anti_pattern.repositories.ProductRepository;

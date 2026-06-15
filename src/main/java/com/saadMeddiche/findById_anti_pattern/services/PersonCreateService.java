@@ -1,6 +1,6 @@
 package com.saadMeddiche.findById_anti_pattern.services;
 
-import com.saadMeddiche.findById_anti_pattern.entitites.Person;
+import com.saadMeddiche.findById_anti_pattern.entities.Person;
 import com.saadMeddiche.findById_anti_pattern.repositories.PersonRepository;
 import com.saadMeddiche.findById_anti_pattern.requests.PersonCreateRequest;
 import jakarta.validation.ConstraintViolation;
